@@ -1,0 +1,33 @@
+.somos{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.somos_organizacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.organizacion_titulo, .biografia_tituloP{
+    font-size: 30px;
+}
+
+.organizacion_text{
+    width: 50%;
+    margin: 40px 0 50px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.organizacion_text strong{
+    color: rgb(5, 5, 72);
+    font-size: 19px;
+    font-family: 'Raleway';
+}
+
+.somos_biografia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/58ed9529f3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/inicio.css">
-    <link rel="stylesheet" href="/css/contacto.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/reclamo.css">
-    <link rel="stylesheet" href="/css/somos.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/reclamo.css">
+    <link rel="stylesheet" href="./css/somos.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Inicio</title>
 </head>
@@ -23,17 +23,17 @@
         <!-- Menú -->
         <nav class="header_nav">
             <ul class="nav_ul">
-                <li class="nav_li"><a href="" class="li_a">Inicio</a></li>
-                <li class="nav_li"><a href="" class="li_a">Somos</a></li>
-                <li class="nav_li"><a href="" class="li_a">Contacto</a></li>
-                <li class="nav_li"><a href="" class="li_a">Reclamo</a></li>
+                <li class="nav_li"><a href="#inicio" class="li_a">Inicio</a></li>
+                <li class="nav_li"><a href="#somos" class="li_a">Somos</a></li>
+                <li class="nav_li"><a href="#contacto" class="li_a">Contacto</a></li>
+                <li class="nav_li"><a href="reclamo" class="li_a">Reclamo</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
-        <!-- Sección Inicio -->
-        <section class="inicio">
+<!------------------------------------------------------------------- Sección Inicio --------------------------------------------------------------------->
+        <section class="inicio" id="inicio">
             <!-- Número de página -->
             <div class="pagina"></div>
 
@@ -48,24 +48,26 @@
             </div>            
         </section>
 
-        <!-- Sección Quienes somos -->
-        <section class="somos">
+        <!------------------------------------------------------------- Sección Quienes somos ---------------------------------------------------------------->
+        <section class="somos" id="somos">
             <!-- Presentación de la empresa -->
-            <div class="somos_organiacion">
-                <h2 class="organizacion_titulo"></h2>
-                <p class="organizacion_text"></p>
+            <div class="somos_organizacion">
+                <h2 class="organizacion_titulo">¿Quienes somos?</h2>
+                <p class="organizacion_text"><strong>Pelisweb</strong> es una base de datos de películas creada por el equipo O. En está página puedes encontrar películas de todos los genéros, las cuáles se encuentran en las siguientes platafrmas de streaming: Netflix, Disney+, Amazon prime, entre otras. ¡Descubre cuál te atrapa.!</p>
             </div>
 
             <!-- Presentación de los creadores -->
             <div class="somos_biografia">
-                <img src="" alt="" class="biografia_img">
-                <h2 class="biografia_titulo"></h2>
-                <p class="biografia_text"></p>
+                <h2 class="biografia_tituloP">Equipo O</h2>
+                <div class="biografias">
+                    <img src="" alt="" class="biografia_img">
+                    <p class="biografia_text"></p>
+                </div>
             </div>
         </section>
 
-        <!-- Sección contacto -->
-        <section class="contacto">
+<!-------------------------------------------------------------- Sección contacto ------------------------------------------------------------------------------->
+        <section class="contacto" id="contacto">
 
             <h2 class="contacto_titulo">Contacto</h2>
 
@@ -87,47 +89,97 @@
                     </div>
                 </div>
 
-                    <div class="form_contenedorInput">
-                        <label for="mail-cliente" class="form_label">Email</label>
-                        <div class="formulario">
-                            <input type="email" name="email" class="form_input" id="emailCliente"
-                                placeholder="Ingrese su mail">
-                        </div>
-                    </div>
-
-                    <div class="form_contenedorInput">
-                        <label for="telefono" class="form_label">Teléfono</label>
-                        <div class="formulario">
-                            <input type="number" name="celular" class="form_input" id="telefono"
-                                placeholder="Ingrese su número de teléfono">
-                        </div>
-                    </div>
-
-                    <div class="form_contenedorInput">
-                        <label for="country-cliente" class="form_label">País</label>
-                        <div class="formulario">
-                            <input type="text" name="pais" class="form_input" id="pais" maxlength="15"
-                                placeholder="Ingrese su país">
-                        </div>
-                    </div>
-
-                    <div class="form_contenedorInput">
-                        <label for="mensaje" class="form_label" id="mensaje">Mensaje</label>
-                        <textarea name="mensaje" name="mensaje" class="form_textArea" id="textArea" cols="30" rows="10"
-                            placeholder="Ingrese su mensaje"></textarea>
-                    </div>
-
-                    <div class="form_btn">
-                        <button type="reset" class="btnBorrar">Borrar</button>
-                        <button type="submit" class="btnEnviar">Enviar</button>
+                <div class="form_contenedorInput">
+                    <label for="mail-cliente" class="form_label">Email</label>
+                    <div class="formulario">
+                        <input type="email" name="email" class="form_input" id="emailCliente"
+                            placeholder="Ingrese su mail">
                     </div>
                 </div>
+
+                <div class="form_contenedorInput">
+                    <label for="mensaje" class="form_label" id="mensaje">Mensaje</label>
+                    <textarea name="mensaje" name="mensaje" class="form_textArea" id="textArea" cols="30" rows="10"
+                        placeholder="Ingrese su mensaje"></textarea>
+                </div>
+
+                <div class="form_btn">
+                    <button type="reset" class="btnBorrar">Borrar</button>
+                    <button type="submit" class="btnEnviar">Enviar</button>
+                </div>
+
             </form>
         </section>
 
-        <!-- Sección Reclamo -->
-        <section class="reclamo">
+<!------------------------------------------------------------------- Sección Reclamo ---------------------------------------------------------------------------->
+        <section class="reclamo" id="reclamo">
+            <h2 class="reclamo_titulo">Reclamo</h2>
+            <form action="" class="reclamo_form" onsubmit="validacion()">
+                <div class="form_contenedorInput">
+                    <label for="name-cliente" class="form_label">Nombre</label>
+                    <div class="formulario">
+                        <input type="text" class="form_input" name="name" id="nameCliente" maxlength="30"
+                            placeholder="Ingrese su nombre">
+                    </div>
+                </div>
 
+                <div class="form_contenedorInput">
+                    <label for="last-name-cliente" class="form_label">Apellido</label>
+                    <div class="formulario">
+                        <input type="text" name="apellido" class="form_input" id="lastName" maxlength="30"
+                            placeholder="Ingrese su apellido">
+                    </div>
+                </div>
+
+                <div class="form_contenedorInput">
+                    <label for="mail-cliente" class="form_label">Email</label>
+                    <div class="formulario">
+                        <input type="email" name="email" class="form_input" id="emailCliente"
+                            placeholder="Ingrese su mail">
+                    </div>
+                </div>
+
+                <div class="form_contenedorInput">
+                    <label for="telefono" class="form_label">Teléfono</label>
+                    <div class="formulario">
+                        <input type="number" name="celular" class="form_input" id="telefono"
+                            placeholder="Ingrese su número de teléfono">
+                    </div>
+                </div>
+
+                
+                <div class="form_contenedorInput">
+                    <label for="country-cliente" class="form_label">País</label>
+                    <div class="formulario">
+                        <input type="text" name="pais" class="form_input" id="pais" maxlength="15"
+                            placeholder="Ingrese su país">
+                    </div>
+                </div>
+
+                <div class="form_contenedorInput">
+                    <label for="country-cliente" class="form_label">Motivo</label>
+                    <div class="formulario">
+                        <select name="motivo" class="form_input" id="motivo">
+                            <option value="reclamo">Reclamo</option>
+                            <option value="sugerencia">Sugerencia</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form_contenedorInput">
+                    <label for="mensaje" class="form_label" id="mensaje">Comentarios</label>
+                    <textarea name="mensaje" name="mensaje" class="form_textArea" id="textArea" cols="30" rows="10"
+                        placeholder="Ingrese su mensaje"></textarea>
+                </div>
+
+
+                <div class="form_btn">
+                    <button type="reset" class="btnBorrar">Borrar</button>
+                    <button type="submit" class="btnEnviar">Enviar</button>
+                </div>
+
+            </form>
         </section>
     </main>
     <footer class="footer">
@@ -139,10 +191,10 @@
         </div>
         <nav class="footer_nav">
             <ul class="footer_nav_ul">
-                <li class="footer_nav_li"><a href="">Inicio</a></li>
-                <li class="footer_nav_li"><a href="">Somos</a></li>
-                <li class="footer_nav_li"><a href="">Contacto</a></li>
-                <li class="footer_nav_li"><a href="">Reclamo</a></li>
+                <li class="footer_nav_li"><a href="#inicio">Inicio</a></li>
+                <li class="footer_nav_li"><a href="#somos">Somos</a></li>
+                <li class="footer_nav_li"><a href="#contacto">Contacto</a></li>
+                <li class="footer_nav_li"><a href="#reclamo">Reclamo</a></li>
             </ul>
         </nav>
     </footer>

@@ -43,17 +43,12 @@ let cargarPeliculas = async ()=>{
                             </div>
                         </div>`
             });
-            
             document.querySelector(".contenedor").innerHTML = peliculas;
             let btnVer = document.querySelector(".btnVer");
             let descripcion = document.querySelector(".text_oculto");
-            
             btnVer.addEventListener("click", ()=>{
-              for(let i = 0; i < btnVer.length; i++ ){
-                  descripcion[i].classList.toggle("ocultar");
-              }
-    })
-        }
+              descripcion.classList.toggle("ocultar");})
+          }
     } catch (error) {
         console.log(error);
     }

@@ -75,6 +75,13 @@
 }
 
 @media(max-width: 680px){
+    .somos_organizacion{
+        height: 300px;
+    }
+.organizacion_text{
+    width: 100%;
+}
+
     .biografias{
         flex-direction: column;
     }
@@ -86,9 +93,6 @@
 
     .biografia_text{
         text-align: center;
-    }
-    .somos_organizacion{
-        height: 300px;
     }
 }
 

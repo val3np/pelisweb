@@ -15,6 +15,7 @@
 
 .organizacion_titulo, .biografia_tituloP{
     font-size: 30px;
+    text-align: center;
 }
 
 .organizacion_text{
@@ -96,5 +97,9 @@
 
     .biografia_img{
         margin-bottom: 15px;
+    }
+
+    .somos_organizacion{
+        height: 400px;
     }
 }

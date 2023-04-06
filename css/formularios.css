@@ -98,7 +98,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .contenedor_arrow{
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     right: 20px;
 }
 
@@ -148,5 +148,11 @@ input[type=number]::-webkit-outer-spin-button {
     .form_contenedorInput{
         margin: 0 auto;
         width: 90%;
+    }
+
+    .contenedor_arrow{
+        position: fixed;
+        bottom: 50px;
+        right: 5px;
     }
 }

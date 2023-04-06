@@ -70,9 +70,9 @@ function validarEmail(valor) {
 }
 
 let form = document.querySelector("#form");
-form.addEventListener("submit", btnSubmit);
+form.addEventListener("submit", btnEnviarForm);
 
-async function btnSubmit(e) {
+async function btnEnviarForm(e) {
   e.preventDefault();
   let form = new FormData(this);
   let response = await fetch(this.action, {
@@ -86,7 +86,6 @@ async function btnSubmit(e) {
   let nombre = document.querySelector("#nameCliente").value;
   let apellido = document.querySelector("#lastName").value;
   let email = document.querySelector("#emailCliente").value;
-  let pais = document.querySelector("#pais").value;
   let textArea = document.querySelector("#textArea").value;
 
   if (nombre.length == 0 || nombre.length === "") {
@@ -133,8 +132,108 @@ async function btnSubmit(e) {
           },
         }).showToast();
         return;
+        } else {
+          if (textArea.length == 0 || nombre.length === "") {
+            Toastify({
+              text: "Debe ingresar un mensaje",
+              duration: 3000,
+              destination: "index.html",
+              newWindow: true,
+              gravity: "top",
+              position: "right",
+              stopOnFocus: true,
+              style: {
+                background: "#4267B3",
+              },
+            }).showToast();
+            return;
+          } else {
+              Toastify({
+                text: "Se envió correctamente",
+                duration: 3000,
+                destination: "index.html",
+                newWindow: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#4267B3",
+                },
+              }).showToast();
+            }
+          }
+        }
+      }
+    }
+
+  //Validación reclamo
+
+  let formulario = document.querySelector(".reclamo_form");
+  formulario.addEventListener("submit", btnSubmit);
+
+async function btnSubmit(e) {
+  e.preventDefault();
+  let formulario = new FormData(this);
+  let response = await fetch(this.action, {
+    method: this.method,
+    body: formulario,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  let nombreR = document.querySelector("#nameClienteR").value;
+  let apellidoR = document.querySelector("#lastNameR").value;
+  let emailR = document.querySelector("#emailClienteR").value;
+  let paisR = document.querySelector("#paisR").value;
+  let textAreaR = document.querySelector("#textAreaR").value;
+
+  if (nombreR.length == 0 || nombreR.length === "") {
+    Toastify({
+      text: "Debe ingresar su nombre",
+      duration: 3000,
+      destination: "index.html",
+      newWindow: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "#4267B3",
+      },
+    }).showToast();
+    return;
+  } else {
+    if (apellidoR.length == 0 || nombreR.length === "") {
+      Toastify({
+        text: "Debe ingresar su apellido",
+        duration: 3000,
+        destination: "index.html",
+        newWindow: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "#4267B3",
+        },
+      }).showToast();
+      return;
+    } else {
+      if (emailR.length == 0 || emailR.length === "") {
+        Toastify({
+          text: "Debe ingresar su email",
+          duration: 3000,
+          destination: "index.html",
+          newWindow: true,
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "#4267B3",
+          },
+        }).showToast();
+        return;
       } else {
-        if (pais.length == 0 || nombre.length === "") {
+        if (paisR.length == 0 || nombreR.length === "") {
           Toastify({
             text: "Debe ingresar su pais",
             duration: 3000,
@@ -149,7 +248,7 @@ async function btnSubmit(e) {
           }).showToast();
           return;
         } else {
-          if (textArea.length == 0 || nombre.length === "") {
+          if (textAreaR.length == 0 || textAreaR.length === "") {
             Toastify({
               text: "Debe ingresar un mensaje",
               duration: 3000,

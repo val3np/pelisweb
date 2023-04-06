@@ -7,6 +7,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: #F4F4F7;
+    padding: 25px;
+    height: 250px;
 }
 
 .organizacion_titulo, .biografia_tituloP{
@@ -15,7 +19,7 @@
 
 .organizacion_text{
     width: 50%;
-    margin: 40px 0 50px 0;
+    margin: 40px 0 0 0;
     text-align: center;
     font-size: 18px;
 }
@@ -30,4 +34,67 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.biografia_tituloP{
+    margin: 50px 0;
+}
+
+.biografias{
+    width: 60%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.biografia_img{
+    width: 200px;
+    height: 200px;
+    margin-right: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.biografia_text{
+    font-size: 17px;
+    padding: 15px;
+}
+
+@media(max-width: 1200px){
+    .organizacion_text{
+        width: 80%;
+    }
+    .biografias{
+        width: 75%;
+    }
+    
+}
+
+@media(max-width: 680px){
+    .biografias{
+        flex-direction: column;
+    }
+    
+    .biografia_img{
+        margin: 15px 0 0 0;
+        border-radius: 15px;
+    }
+
+    .biografia_text{
+        text-align: center;
+    }
+}
+
+
+@media(max-width: 360px){
+    .biografias{
+        width: 80%;
+    }
+
+    .biografia_img{
+        margin-bottom: 15px;
+    }
 }

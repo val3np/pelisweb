@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/58ed9529f3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/contacto.css">
-    <link rel="stylesheet" href="./css/inicio.css">
-    <link rel="stylesheet" href="./css/reclamo.css">
-    <link rel="stylesheet" href="./css/somos.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/somos.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Inicio</title>
 </head>
@@ -60,14 +59,14 @@
             <div class="somos_biografia">
                 <h2 class="biografia_tituloP">Equipo O</h2>
                 <div class="biografias">
-                    <img src="" alt="" class="biografia_img">
-                    <p class="biografia_text"></p>
+                    <img src="https://media.licdn.com/dms/image/C5603AQHBE0GWGbqkEw/profile-displayphoto-shrink_800_800/0/1619377294146?e=1686182400&v=beta&t=earhsfULcJe4juwOoIDYWJWnxYVnXMdkhec2xa6cCSA" alt="foto" class="biografia_img">
+                    <p class="biografia_text">Ing. Civil/ QA Engineer, tengo habilidades en localización de errores, metodologías ágiles, diseño y ejecución de casos de prueba. Skills: HTML, CSS, SQL SERVER, Azure DevOps, Jira, Excel, JavaScript y React </p>
                 </div>
             </div>
         </section>
 
 <!-------------------------------------------------------------- Sección contacto ------------------------------------------------------------------------------->
-        <section class="contacto" id="contacto">
+        <section class="contacto contacto_bg" id="contacto">
 
             <h2 class="contacto_titulo">Contacto</h2>
 
@@ -76,7 +75,7 @@
                 <div class="form_contenedorInput">
                     <label for="name-cliente" class="form_label">Nombre</label>
                     <div class="formulario">
-                        <input type="text" class="form_input" name="name" id="nameCliente" maxlength="30"
+                        <input type="text" class="form_input form_color" name="name" id="nameCliente" maxlength="30"
                             placeholder="Ingrese su nombre">
                     </div>
                 </div>
@@ -84,7 +83,7 @@
                 <div class="form_contenedorInput">
                     <label for="last-name-cliente" class="form_label">Apellido</label>
                     <div class="formulario">
-                        <input type="text" name="apellido" class="form_input" id="lastName" maxlength="30"
+                        <input type="text" name="apellido" class="form_input form_color" id="lastName" maxlength="30"
                             placeholder="Ingrese su apellido">
                     </div>
                 </div>
@@ -92,14 +91,14 @@
                 <div class="form_contenedorInput">
                     <label for="mail-cliente" class="form_label">Email</label>
                     <div class="formulario">
-                        <input type="email" name="email" class="form_input" id="emailCliente"
+                        <input type="email" name="email" class="form_input form_color" id="emailCliente"
                             placeholder="Ingrese su mail">
                     </div>
                 </div>
 
                 <div class="form_contenedorInput">
                     <label for="mensaje" class="form_label" id="mensaje">Mensaje</label>
-                    <textarea name="mensaje" name="mensaje" class="form_textArea" id="textArea" cols="30" rows="10"
+                    <textarea name="mensaje" name="mensaje" class="form_textArea form_color" id="textArea" cols="30" rows="10"
                         placeholder="Ingrese su mensaje"></textarea>
                 </div>
 
@@ -112,7 +111,7 @@
         </section>
 
 <!------------------------------------------------------------------- Sección Reclamo ---------------------------------------------------------------------------->
-        <section class="reclamo" id="reclamo">
+        <section class="reclamo recla" id="reclamo">
             <h2 class="reclamo_titulo">Reclamo</h2>
             <form action="" class="reclamo_form" onsubmit="validacion()">
                 <div class="form_contenedorInput">

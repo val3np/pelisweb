@@ -25,7 +25,7 @@ btnSiguiente.addEventListener("click", ()=>{
     }
 })
 
-
+var descripciones;
 
 let cargarPeliculas = async ()=>{
     try {
@@ -47,8 +47,8 @@ let cargarPeliculas = async ()=>{
             let btnVer = document.querySelector(".btnVer");
             let descripcion = document.querySelector(".text_oculto");
             btnVer.addEventListener("click", ()=>{
-              descripcion.classList.toggle("ocultar");})
-          }
+            descripcion.classList.toggle("ocultar");})
+        }
     } catch (error) {
         console.log(error);
     }

@@ -28,36 +28,38 @@ btnSiguiente.addEventListener("click", ()=>{
 var descripciones;
 
 let cargarPeliculas = async ()=>{
-    try {
-        let respuesta = await axios (`https://api.themoviedb.org/3/movie/popular?api_key=a464131ac038695514eb64460b034e70&language=es-MX&page=${pagina}`)
-        if( respuesta.status === 200){
-            let datos = await respuesta.data;
-            let peliculas = "";
-            datos.results.forEach((pelicula)=>{
-            peliculas+=`<div class="pelicula">
-                            <div class="card">
-                                <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"/>
-                                <h3 class="titulo">${pelicula.title}</h3>
-                                <button class="btnVer">Ver más</button>
-                                <div class="text_oculto ocultar">${pelicula.overview}</div>
-                            </div>
-                        </div>`
-            });
-            document.querySelector(".contenedor").innerHTML = peliculas;
-            let btnVer = document.querySelector(".btnVer");
-            let descripcion = document.querySelector(".text_oculto");
-            btnVer.addEventListener("click", ()=>{
-            descripcion.classList.toggle("ocultar");})
-        }
-    } catch (error) {
-        console.log(error);
-    }
-    document.querySelector(".nPagina").innerHTML = pagina
-    document.querySelector(".pagina").innerHTML = `Página n° ${pagina}`
-    
-    
+  try {
+      let respuesta = await axios (`https://api.themoviedb.org/3/movie/popular?api_key=a464131ac038695514eb64460b034e70&language=es-MX&page=${pagina}`)
+      if( respuesta.status === 200){
+          let datos = await respuesta.data;
+          let peliculas = "";
+          datos.results.forEach((pelicula)=>{
+          peliculas+=`<div class="pelicula">
+                          <div class="card">
+                              <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"/>
+                              <h3 class="titulo">${pelicula.title}</h3>
+                              <button class="btnVer">Ver más</button>
+                              <div class="text_oculto ocultar">${pelicula.overview}</div>
+                          </div>
+                      </div>`
+          });
+          document.querySelector(".contenedor").innerHTML = peliculas;
+          let btnVer = document.querySelectorAll(".btnVer");
+          let descripcion = document.querySelectorAll(".text_oculto");
+          btnVer.forEach((btn, index) => {
+              btn.addEventListener("click", () => {
+                  descripcion[index].classList.toggle("ocultar");
+              });
+          });
+      }
+  } catch (error) {
+      console.log(error);
+  }
+  document.querySelector(".nPagina").innerHTML = pagina
+  document.querySelector(".pagina").innerHTML = `Página n° ${pagina}`
 }
-cargarPeliculas()
+
+cargarPeliculas();
 
 //Validación del formulario
 

@@ -1,5 +1,4 @@
 
-
 window.addEventListener("load", ()=>{
     cargarPeliculas()
 })
@@ -189,6 +188,38 @@ async function btnSubmit(e) {
   let emailR = document.querySelector("#emailClienteR").value;
   let paisR = document.querySelector("#paisR").value;
   let textAreaR = document.querySelector("#textAreaR").value;
+  let motivoR = document.querySelector("#motivoR").value;
+  let telefonoR = document.querySelector("#telefonoR").value;
+
+  let reclamo = `
+  Nombre: ${nombreR}
+
+  Apellido: ${apellidoR}
+
+  Email: ${emailR}
+
+  País: ${paisR}
+
+  Teléfono: ${telefonoR}
+
+  Motivo: ${motivoR}
+
+  Comentarios: ${textAreaR}
+  `
+  
+  window.jsPDF = window.jspdf.jsPDF;
+  function descargarPDF(){
+    const doc = new jsPDF()
+    doc.setTextColor(139, 92, 221);
+    doc.setFontSize(20);
+    doc.text("Formulario de Reclamo", 70, 15);
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(14);
+    doc.text(reclamo, 20, 27);
+    doc.save("Reclamo.pdf");
+  }
+
+  
 
   if (nombreR.length == 0 || nombreR.length === "") {
     Toastify({
@@ -204,7 +235,7 @@ async function btnSubmit(e) {
       },
     }).showToast();
     return;
-  } else {
+    } else {
     if (apellidoR.length == 0 || nombreR.length === "") {
       Toastify({
         text: "Debe ingresar su apellido",
@@ -234,10 +265,25 @@ async function btnSubmit(e) {
           },
         }).showToast();
         return;
+    } else {
+      if (paisR.length == 0 || nombreR.length === "") {
+        Toastify({
+          text: "Debe ingresar su pais",
+          duration: 3000,
+          destination: "index.html",
+          newWindow: true,
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "#4267B3",
+          },
+        }).showToast();
+        return;
       } else {
-        if (paisR.length == 0 || nombreR.length === "") {
+        if (textAreaR.length == 0 || textAreaR.length === "") {
           Toastify({
-            text: "Debe ingresar su pais",
+            text: "Debe ingresar un mensaje",
             duration: 3000,
             destination: "index.html",
             newWindow: true,
@@ -249,37 +295,24 @@ async function btnSubmit(e) {
             },
           }).showToast();
           return;
-        } else {
-          if (textAreaR.length == 0 || textAreaR.length === "") {
-            Toastify({
-              text: "Debe ingresar un mensaje",
-              duration: 3000,
-              destination: "index.html",
-              newWindow: true,
-              gravity: "top",
-              position: "right",
-              stopOnFocus: true,
-              style: {
-                background: "#4267B3",
-              },
+      } else {
+          descargarPDF();
+          Toastify({
+            text: "Se envió correctamente",
+            duration: 3000,
+            destination: "index.html",
+            newWindow: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+              background: "#4267B3",
+            },
             }).showToast();
-            return;
-          } else {
-              Toastify({
-                text: "Se envió correctamente",
-                duration: 3000,
-                destination: "index.html",
-                newWindow: true,
-                gravity: "top",
-                position: "right",
-                stopOnFocus: true,
-                style: {
-                  background: "#4267B3",
-                },
-              }).showToast();
-            }
           }
         }
       }
     }
   }
+}
+
